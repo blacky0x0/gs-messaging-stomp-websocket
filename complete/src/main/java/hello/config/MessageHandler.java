@@ -1,5 +1,6 @@
-package hello;
+package hello.config;
 
+import hello.service.WebsocketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;

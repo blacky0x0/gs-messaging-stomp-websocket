@@ -1,4 +1,4 @@
-package hello;
+package hello.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.socket.TextMessage;

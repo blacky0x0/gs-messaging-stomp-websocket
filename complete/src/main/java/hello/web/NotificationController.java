@@ -1,5 +1,6 @@
-package hello;
+package hello.web;
 
+import hello.service.WebsocketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
