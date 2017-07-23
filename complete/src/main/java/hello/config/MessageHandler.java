@@ -18,7 +18,12 @@ public class MessageHandler extends TextWebSocketHandler {
 
     @Override
     public void handleTextMessage(WebSocketSession session, TextMessage textMessage) throws IOException {
-        session.sendMessage(new TextMessage("pong: received: " + textMessage.getPayload()));
+        if ("ping".equalsIgnoreCase(textMessage.getPayload())) {
+            session.sendMessage(new TextMessage("pong"));
+        } else {
+            CharSequence sequence = "server responded with echo \'" + textMessage.getPayload() + "\'";
+            session.sendMessage(new TextMessage(sequence));
+        }
     }
 
     @Override

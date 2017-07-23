@@ -23,7 +23,7 @@ public class WebsocketServiceImpl implements WebsocketService {
     public void send(String message) {
         for (WebSocketSession webSocketSession : sessions) {
             try {
-                webSocketSession.sendMessage(new TextMessage(message));
+                webSocketSession.sendMessage(new TextMessage("server sent: " + message));
             } catch (IOException e) {
                 e.printStackTrace();
             }
